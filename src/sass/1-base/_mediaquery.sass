@@ -1,0 +1,400 @@
+@media screen and (min-width: 320px) and (max-width: 480px)
+
+  .grid
+    grid-template-columns: 1fr
+
+    // Navigation
+    .nav__mainlinks, .nav__buttons--login, .nav__buttons--demo
+      display: none
+
+    // Header content section
+    +element('header')
+      grid-column: 1
+
+      +modifier('content')
+
+        +modifier('img')
+          height: 550px
+          object-fit: cover
+
+        +modifier('title')
+          width: 100%
+
+          & > h1
+            width: 100%
+
+        +modifier('text')
+          width: 100%
+
+          & > p
+            font-size: 1.6em
+            line-height: 38px
+
+    +element('content')
+      grid-column: 1
+      padding: 0
+
+    // Culture section
+    .culture
+      padding: 5px 30px
+      +element('header')
+        +modifier('title')
+
+        +modifier('subtitle')
+          font-size: 1.9em
+          line-height: 35px
+          text-align: left
+
+      +element('content')
+        +modifier('card')
+          width: 100%
+          margin-bottom: 40px
+
+          +modifier('title')
+            font-size: 2em
+
+          +modifier('text')
+            font-size: 1.7em
+            line-height: 40px
+
+      +element('footer')
+        +modifier('text')
+          margin-bottom: 40px
+          font-size: 1.9em
+          line-height: 40px
+          text-align: left
+
+        +modifier('btn')
+          width: 100%
+          height: 100px
+          font-size: 1.75em
+
+    // Progress section
+    .progress
+      +element('timeline')
+        +modifier('left')
+          width: 130px
+          padding-right: 60px
+
+          &::after
+            left: 90px
+
+        +modifier('right')
+          width: calc(100% - 130px)
+          padding-left: 60px
+
+    // Offices section
+    .offices
+      background-position-y: 0
+      background-size: cover
+
+      +element('card')
+        width: 85%
+        height: 350px
+        margin-bottom: 30px
+
+        +modifier('title')
+          font-size: 2.5em
+
+        +modifier('city')
+          font-size: 1.8em
+
+        +modifier('street')
+          font-size: 1.8em
+
+    //Investors
+    .investors
+      background-position-y: -30px
+
+      +element('card')
+        width: 85%
+        height: 250px
+
+    //Investors section
+    .future
+      height: 600px
+      border-radius: 0
+      clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%)
+      -webkit-clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%)
+
+      +element('title')
+        margin-bottom: 50px
+
+      +element('buttons')
+        +modifier('btn')
+          width: 80%
+          height: 80px
+          margin-bottom: 40px
+          font-size: 1.75em
+
+    //Info section
+    .info
+      padding: 5px 30px
+      flex-wrap: wrap
+
+      +element('logo')
+        width: 100%
+        height: 100px
+        background-size: 50%
+
+      +element('whysaleswhale')
+        width: 50%
+        margin-bottom: 20px
+
+        +modifier('title')
+          font-size: 1.6em
+
+        +modifier('list')
+          +modifier('item')
+            height: 40px
+
+            +modifier('link')
+              font-size: 1.2em
+
+      +element('product')
+        width: 50%
+        margin-bottom: 20px
+
+        +modifier('title')
+          font-size: 1.6em
+
+        +modifier('list')
+          +modifier('item')
+            height: 40px
+
+            +modifier('link')
+              font-size: 1.2em
+
+      +element('company')
+        width: 50%
+        margin-bottom: 20px
+
+        +modifier('title')
+          font-size: 1.6em
+
+        +modifier('list')
+          +modifier('item')
+            height: 40px
+
+            +modifier('link')
+              font-size: 1.2em
+
+      +element('contact')
+          width: 50%
+          margin-bottom: 20px
+
+          +modifier('title')
+            font-size: 1.6em
+
+          +modifier('email')
+            font-size: 1.2em
+
+          +modifier('address')
+            font-size: 1.2em
+            line-height: 30px
+
+    // Footer section
+    +element('footer')
+      grid-column: 1
+      height: 400px
+      background-position: 60% 100%
+
+      +modifier('top')
+        margin-bottom: 20px
+
+        +modifier('left')
+          order: 1
+          width: 100%
+          text-align: center
+
+          +modifier('link')
+            display: block
+            width: 100%
+            margin: 0 0 10px 0
+            font-size: 1.6em
+
+        +modifier('right')
+          width: 100%
+          text-align: center
+          margin-bottom: 20px
+
+      +modifier('copy')
+        font-size: 1.4em
+        text-align: center
+
+@media screen and (min-width: 768px) and (max-width: 768px)
+  // Navigation
+  .nav__mainlinks--link, .nav__buttons--login, .nav__buttons--demo
+    display: none
+
+  .grid
+    grid-template-columns: 1fr
+
+    // Header content section
+    +element('header')
+      +modifier('content')
+        +modifier('img')
+          height: 300px
+          object-fit: cover
+
+        +modifier('title')
+          & > h1
+            width: 70%
+            font-size: 1.8em
+            line-height: unset
+
+        +modifier('text')
+          & > p
+            font-size: 1em
+            line-height: 24px
+
+    // Footer section
+    +element('footer')
+      height: 250px
+
+      +modifier('top')
+        +modifier('left')
+          +modifier('link')
+            font-size: 1em
+
+        +modifier('right')
+          +modifier('link')
+            width: 28px
+            height: 28px
+
+      +modifier('copy')
+        font-size: .875em
+
+  // Culture section
+  .culture
+    +element('header')
+      +modifier('title')
+        font-size: 2em
+        line-height: 38px
+
+      +modifier('subtitle')
+        font-size: 1em
+
+    +element('content')
+      +modifier('card')
+        width: 185px
+
+        +modifier('img')
+          width: 56px
+          height: 56px
+
+        +modifier('title')
+          font-size: 1em
+
+        +modifier('text')
+          font-size: 1em
+          line-height: 24px
+
+    +element('footer')
+      +modifier('text')
+        width: 400px
+        font-size: 1em
+        line-height: 24px
+        margin: 0 auto 15px auto
+
+      +modifier('btn')
+        width: 170px
+        height: 42px
+
+  // Proggress section
+  .progress
+    +element('title')
+      font-size: 2em
+      line-height: 38px
+
+    +element('timeline')
+      +modifier('left')
+        width: 250px
+        font-size: 1em
+
+        &::after
+          left: 210px
+
+      +modifier('right')
+        width: calc(100% - 250px)
+        font-size: 1em
+
+  // Offices section
+  .offices
+    background-position-y: 40px
+
+    +element('title')
+      font-size: 2em
+      line-height: 38px
+
+    +element('card')
+      width: 270px
+      height: 200px
+
+      +modifier('img')
+        width: 56px
+        height: 56px
+        margin-bottom: 5px
+
+      +modifier('title')
+        font-size: 1.625em
+        line-height: 34px
+        margin-bottom: 5px
+
+      +modifier('street')
+        font-size: 1em
+        line-height: 24px
+
+      +modifier('city')
+        font-size: 1em
+        line-height: 24px
+
+  //Investors section
+  .investors
+    background-position-y: -195px
+
+    +element('title')
+      font-size: 2em
+      line-height: 38px
+
+    +element('card')
+      width: 270px
+      height: 145px
+
+      +modifier('img')
+        width: 70%
+        height: auto
+        object-fit: contain
+
+  // Futer section
+  .future
+    height: 215px
+
+    +element('title')
+      font-size: 1.75em
+
+    +element('buttons')
+      +modifier('btn')
+        width: 145px
+        height: 43px
+
+  // Info section
+  .info
+    flex-wrap: wrap
+    justify-content: flex-end
+
+    +element('logo')
+      width: 40%
+      height: 235px
+
+    +element('whysaleswhale')
+      width: calc(60% / 2)
+
+    +element('product')
+      width: calc(60% / 2)
+
+    +element('company')
+      width: calc(60% / 2)
+
+    +element('contact')
+      width: calc(60% / 2)

@@ -1,0 +1,9 @@
+.investors
+  
+  h2.investors__title Our Inverstors
+  -
+    var investorsIcons = ['y-combinator', 'monks-hill', 'strive', 'wavemaker']
+    
+  each value in investorsIcons
+    .investors__card
+      img.investors__card--img(src=`assets/images/icons/${value}.svg` alt='investors logos')

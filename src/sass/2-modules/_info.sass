@@ -1,0 +1,75 @@
+.info
+  display: flex
+  justify-content: center
+  margin: 30px 0 0 0
+
+  +element('logo')
+    width: 30%
+    height: 300px
+    padding-left: 20px
+    background-image: url('../images/icons/whalelogo.svg')
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: 70%
+
+  +element('whysaleswhale')
+    @include infoBox
+
+    +modifier('title')
+      @include infoBoxTitle
+
+    +modifier('list')
+      @include infoBoxList
+
+      +modifier('item')
+        @include infoBoxListItem
+
+        +modifier('link')
+          @include infoBoxListItemLink
+
+  +element('product')
+    @include infoBox
+
+    +modifier('title')
+      @include infoBoxTitle
+
+    +modifier('list')
+      @include infoBoxList
+
+      +modifier('item')
+        @include infoBoxListItem
+
+        +modifier('link')
+          @include infoBoxListItemLink
+
+  +element('company')
+    @include infoBox
+
+    +modifier('title')
+      @include infoBoxTitle
+
+    +modifier('list')
+      @include infoBoxList
+
+      +modifier('item')
+        @include infoBoxListItem
+
+        +modifier('link')
+          @include infoBoxListItemLink
+
+  +element('contact')
+    @include infoBox
+
+    +modifier('title')
+      @include infoBoxTitle
+      margin-bottom: 5px
+
+    +modifier('email')
+      @include infoBoxListItemLink
+      display: inline-block
+      margin: 20px 0
+
+    +modifier('address')
+      font-size: .9em
+      font-style: normal
+      margin-bottom: 20px

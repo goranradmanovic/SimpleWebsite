@@ -1,0 +1,37 @@
+.investors
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  margin: 0 0 30px 0
+  padding-top: 50px
+  background-image: url('../images/main-section/investors-bg.svg')
+  background-repeat: no-repeat
+  background-position-x: center
+  background-position-y: -90px
+
+  +element('title')
+    width: 100%
+    margin-bottom: 20px
+    font-size: 3.625em
+    font-weight: bold
+    text-align: center
+    color: $black-text
+
+  +element('card')
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 530px
+    height: 285px
+    margin-bottom: 50px
+    border: 1px solid #E5E5E5
+    border-radius: 5px
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08)
+    background-repeat: no-repeat
+    background-position: center
+    background-color: #FFFFFF
+    transition: box-shadow 400ms ease-in-out
+
+    &:hover
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, .2)

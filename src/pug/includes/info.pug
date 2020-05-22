@@ -1,0 +1,40 @@
+.info
+  
+  .info__logo
+  
+  -
+    var whysaleswhale = ['Collaborative Intelligence', 'AI Assistant Capabilities', 'Customer Stories', 'Use Case - Technology', 'Use Case - Education', 'Use Case - Events']
+    var product = ['AI Conversations', 'Lead Enrichment', 'Deal Intelligence', 'Workflow Integration']
+    var company = ['About us', 'Blog', 'Resources', 'Careers', 'Help Centre']
+    var offices = [{title: 'US Office', street: '701 Rhode Island Ave', city: 'NW Washington, DC 20036'}, {title: 'Singapore Office', street: '155B Telok Ayer Street', city: 'Singapore, 068611'}]
+  
+  .info__whysaleswhale
+    h4.info__whysaleswhale--title Why Saleswhale
+    ul.info__whysaleswhale--list
+      each value in whysaleswhale
+        li.info__whysaleswhale--list--item
+          a.info__whysaleswhale--list--item--link(href='#')= value
+  
+  .info__product
+    h4.info__product--title Product    
+    ul.info__product--list
+      each value in product
+        li.info__product--list--item
+          a.info__product--list--item--link(href='#')= value
+
+  .info__company
+    h4.info__company--title Company   
+    ul.info__company--list
+      each value in company
+        li.info__company--list--item
+          a.info__company--list--item--link(href='#')= value
+        
+  .info__contact
+    h4.info__contact--title Contact
+    a.info__contact--email(href='mailto: hello@saleswhale.com') hello@saleswhale.com
+    
+    each value in offices
+      h4.info__contact--title= value.title
+      address.info__contact--address
+        p.info__contact--text= value.street
+        p.info__contact--text= value.city

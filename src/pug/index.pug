@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+	head
+		link(rel='shortcut icon' href='favicon.ico')
+		title Saleswhale
+		meta(charset='utf-8')
+		meta(http-equiv='Content-Type' content='text/html; charset=ISO-8859-1')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='viewport' content='initial-scale=1, viewport-fit=cover')
+		meta(name='description' content='This is a test web site.')
+		meta(name='keywords' content='test, website, responsivnes')
+		meta(name='author' content='Goran Radmanovic')
+		link(rel='stylesheet' href='assets/css/main.css')
+	body
+		.grid
+			header.grid__header
+				include includes/nav.pug
+				include includes/header-content.pug
+				
+			section.grid__content
+				include includes/culture.pug
+				include includes/progress.pug
+				include includes/offices.pug
+				include includes/investors.pug
+				include includes/future.pug
+				include includes/info.pug
+					
+			footer.grid__footer
+				include includes/footer.pug
+				
+		script(src='assets/js/main.js')

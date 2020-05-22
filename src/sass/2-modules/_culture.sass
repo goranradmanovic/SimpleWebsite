@@ -1,0 +1,70 @@
+.culture
+  display: flex
+  flex-wrap: wrap
+  margin: 50px 0
+
+  +element('header')
+    width: 100%
+    text-align: center
+
+    +modifier('title')
+      margin-bottom: 20px
+      font-size: 3.625em
+      font-weight: bold
+      color: $black-text
+
+    +modifier('subtitle')
+      font-size: 1.313em
+      color: $blue-text
+
+  +element('content')
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    margin: 30px 0
+
+    +modifier('card')
+      width: 355px
+
+      +modifier('img')
+        width: 80px
+        height: 80px
+
+      +modifier('title')
+        margin: 10px 0
+        font-size: 1.313em
+        font-weight: bold
+        color: $black-text
+
+      +modifier('text')
+        font-size: 1.125em
+        line-height: 32px
+        color: $blue-text
+
+  +element('footer')
+    width: 100%
+    text-align: center
+
+    +modifier('text')
+      margin-bottom: 15px
+      font-size: 1.125em
+      line-height: 38px
+      color: $black-text
+
+    +modifier('btn')
+      width: 150px
+      height: 59px
+      font-size: 1.125em
+      border-color: $primary-blue
+      border-style: solid
+      border-radius: 5px
+      font-weight: bold
+      cursor: pointer
+      color: $white-text
+      background-color: $primary-blue
+      transition: color 400ms ease-in-out, background-color 400ms ease-in-out
+
+      &:hover
+        color: $primary-blue
+        background-color: $white-text

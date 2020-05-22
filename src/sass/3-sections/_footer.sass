@@ -1,0 +1,60 @@
+.grid__footer
+	grid-column: span 2
+	height: 300px
+	padding: 30px
+	background-image: url('../images/footer-bg/footer-img.svg')
+	background-repeat: no-repeat
+	background-position: bottom
+	color: $black-text
+	background-color: #F4F4F4
+
+	+modifier('top')
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+
+		+modifier('left')
+			width: 50%
+
+			+modifier('link')
+				margin-right: 30px
+				font-size: 1.125em
+				font-weight: bold
+				color: $black-text
+				text-decoration: none
+				transition: color 400ms ease-in-out
+
+				&:hover
+					color: $primary-blue
+					text-decoration: underline
+
+		+modifier('right')
+			width: 50%
+			text-align: right
+
+			+modifier('link')
+				display: inline-block
+				width: 40px
+				height: 40px
+				margin-left: 20px
+				border-radius: 50%
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+				transition: box-shadow 400ms ease-in-out
+
+				&:hover
+					box-shadow: 0px 10px 40px rgba(0, 0, 0, .2)
+
+				&:nth-child(1)
+					background-image: url('../images/icons/facebook.svg')
+
+				&:nth-child(2)
+					background-image: url('../images/icons/twitter.svg')
+
+				&:nth-child(3)
+					background-image: url('../images/icons/linkedin.svg')
+
+	+modifier('copy')
+		width: 100%
+		font-size: 1.125em

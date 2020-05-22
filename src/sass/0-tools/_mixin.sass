@@ -1,0 +1,44 @@
+//Selecting nth child of any element
+//=child($n)
+//	&:nth-child(#{$n})
+//		background-color: red
+
+// Elements SASS mixin koji nam mijenja &__ tako da to ne moramo uvjek pisati
+// Mixin se u SASS-u definira pomocu '=',a u SCSS sa @mixin
+=element($element)
+	&__#{$element}
+		@content
+
+// Modifier -- SASS mixin koji nam mijenja &-- tako da to ne moramo uvjek pisati
+=modifier($modifier)
+	&--#{$modifier}
+		@content
+
+
+// Info @mixins
+
+@mixin infoBox
+	width: calc(70% / 4)
+	color: $black-text
+
+@mixin infoBoxTitle
+	margin-bottom: 20px
+	font-size: 1.125em
+	font-weight: bold
+
+@mixin infoBoxList
+	padding: 0
+	list-style-type: none
+
+@mixin infoBoxListItem
+	height: 30px
+
+@mixin infoBoxListItemLink
+  font-size: .9em
+  text-decoration: none
+  color: $black-text
+  transition: color 400ms ease-in-out
+
+  &:hover
+    color: $primary-blue
+    text-decoration: underline

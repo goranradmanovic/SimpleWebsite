@@ -1,0 +1,35 @@
+-
+  var timeline = [
+    {year: '', text: ''},
+    {year: 2015, text: 'Founded in Singapore by Gabriel Lim, Ethan Le, and Venus Wong'},
+    {year: 2016, text: 'Accepted into Y Combinator (S16) and moved to San Francisco'},
+    {year: 2017, text: 'Raised US$1.2M in seed funding and hired core engineers'},
+    {year: 2019, text: 'Raised US$5.3M in Series A and expanded team size'},
+    {year: 2020, text: 'Opened US office in Washington, DC and hired US sales team'},
+    {year: '', text: ''},
+  ]
+
+.progress
+  h2.progress__title Our Progress
+  
+  each value, index in timeline
+    if index == 0
+      .progress__timeline.first
+        .progress__timeline--left
+        .progress__timeline--right
+    else if index == 6
+      .progress__timeline.last
+        .progress__timeline--left
+        .progress__timeline--right
+    else
+      .progress__timeline
+        .progress__timeline--left= value.year
+        .progress__timeline--right= value.text
+    
+    
+  //-each value, index in timeline
+    .progress__timeline
+      .progress__timeline--left= value.year
+        if index == 0
+          p= index
+      .progress__timeline--right= value.text

@@ -1,0 +1,68 @@
+.nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 100px
+  padding: 5px 30px
+
+  +element('logo')
+    width: 185px
+
+    +modifier('link')
+      +modifier('img')
+        width: 100%
+
+  +element('mainlinks')
+    width: calc(100% - 300px)
+    font-size: 1.125em
+    font-weight: bold
+    text-align: center
+
+    +modifier('link')
+      margin: 0 20px
+      text-decoration: none
+      color: $black-text
+      transition: color 400ms ease-in-out
+
+      &:hover
+        color: $primary-blue
+        text-decoration: underline
+
+  +element('buttons')
+    width: 300px
+    text-align: right
+
+    +modifier('login')
+      width: 75px
+      height: 42px
+      margin-right: 10px
+      font-size: 1.125em
+      font-weight: bold
+      border-color: $primary-blue
+      border-style: solid
+      border-radius: 5px
+      cursor: pointer
+      color: $primary-blue
+      background-color: #FFFFFF
+      transition: color 400ms ease-in-out, background-color 400ms ease-in-out
+
+      &:hover
+        color: $white-text
+        background-color: $primary-blue
+
+    +modifier('demo')
+      width: 150px
+      height: 42px
+      font-size: 1.125em
+      font-weight: bold
+      border-color: $primary-blue
+      border-style: solid
+      border-radius: 5px
+      cursor: pointer
+      color: $white-text
+      background-color: $primary-blue
+      transition: color 400ms ease-in-out, background-color 400ms ease-in-out
+
+      &:hover
+        color: $primary-blue
+        background-color: $white-text

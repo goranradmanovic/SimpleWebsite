@@ -1,0 +1,15 @@
+-
+  var officesCards = [
+    {title: 'Singapore', street: '155B Telok Ayer Street', city: 'Singapore, 068611'},
+    {title: 'Washington DC', street: '1701 Rhode Island Ave NW', city: 'Washington, DC 20036'}
+  ]
+
+.offices
+  h2.offices__title Our Offices
+  
+  each value in officesCards
+    .offices__card
+      img.offices__card--img(src='assets/images/icons/avatar-offices.svg' alt='avatar office')
+      h3.offices__card--title= value.title
+      p.offices__card--street= value.street
+      p.offices__card--city= value.city

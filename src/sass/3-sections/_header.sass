@@ -1,0 +1,32 @@
+.grid__header
+	grid-column: span 2
+	grid-row: 1
+
+	+modifier('content')
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		padding: 5px 30px
+		color: $black-text
+
+		+modifier('img')
+			width: 100%
+			margin-bottom: 50px
+
+		+modifier('title')
+			width: 50%
+
+			& > h1
+				width: 80%
+				margin-top: 0
+				font-size: 3.625em
+				font-weight: bold
+				line-height: 62px
+
+		+modifier('text')
+			width: 50%
+
+			& > p
+				margin-bottom: 20px
+				font-size: 1.125em
+				line-height: 32px
